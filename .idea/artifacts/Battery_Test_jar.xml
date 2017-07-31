@@ -1,0 +1,8 @@
+<component name="ArtifactManager">
+  <artifact type="jar" build-on-make="true" name="Battery Test:jar">
+    <output-path>$PROJECT_DIR$/out/artifacts/Battery_Test_jar</output-path>
+    <root id="archive" name="Battery Test.jar">
+      <element id="module-output" name="Battery Test" />
+    </root>
+  </artifact>
+</component>
