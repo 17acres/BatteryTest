@@ -1,0 +1,2 @@
+# BatteryTest
+Interfaces with Jaguar motor controller over serial and provides multiple output types and logging features for battery characterization and testing.  [BDC-COMM] {http://content.vexrobotics.com/downloads/217-3367-VEXpro_Jaguar_BDC-COMM-107.zip} provided by VEX Robotics must be in the same directory of the jar file to function. The jaguar must be connected to the computer via a serial port (tested using a USB to serial adapter) to the left port. See [my website] { http://dev.17acr.com/battery-test} for more information.
