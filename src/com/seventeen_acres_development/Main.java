@@ -16,7 +16,7 @@ public class Main {
         for (int i = 0; i < 6; i++) {
             ReaderReader.shortLog[i] = new ArrayList<>();
         }
-        Process p = Runtime.getRuntime().exec("bdc-comm-107.exe -c "+COMPort);
+        Process p = Runtime.getRuntime().exec("bdc-comm-107.exe -c " + COMPort);
         r = new BufferedReader(new InputStreamReader(p.getInputStream()));
         writer = new BufferedWriter(new OutputStreamWriter(p.getOutputStream()));
         //writer=new BufferedWriter(new OutputStreamWriter(System.out));
@@ -31,7 +31,7 @@ public class Main {
                 writer.write("stat cur\n");
                 writer.write("stat vout\n");
                 writer.write("stat vout2\n");
-                if(jagPID)
+                if (jagPID)
                     writer.write("cur set\n");
                 else
                     writer.write("volt set\n");

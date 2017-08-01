@@ -6,6 +6,7 @@ import java.util.concurrent.TimeUnit;
 
 /**
  * Created by Dan on 8/13/2016.
+ * The WaveformManager class manages the spinners for output parameters and calculates the output value to send to the jag over serial
  */
 public class WaveformManager {
     public static int mode;//constant,sine,square,sawtooth
