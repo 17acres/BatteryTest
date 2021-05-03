@@ -15,11 +15,13 @@ public class ReaderReader implements Runnable {
     public void run() {
         try {
             if(!Main.jagPID) {
-                int pidval=PIDController.getInstance().doPID((int) (ReaderReader.getInputCurrent() * 1000));
-                if((getOutputVoltagePercentage()*326.27!=pidval)&&((pidval>0&&getSetCurrent()>0)||pidval==getSetCurrent())) {
-                    Main.writer.write("volt set " + pidval + "\n");
-                    System.out.println("ran"+(double)pidval/326.27);
-                }
+                System.exit(250);
+                //Need PID controller implementation. Designed to work with a modified version of the leJOS NXJ PIDController. Kp was .000001, Ki was .005, Kd was .13 with output limited at 32767
+                //Set pidval based on PID result *1000
+//                if((getOutputVoltagePercentage()*326.27!=pidval)&&((pidval>0&&getSetCurrent()>0)||pidval==getSetCurrent())) {
+//                    Main.writer.write("volt set " + pidval + "\n");
+//                    System.out.println("ran"+(double)pidval/326.27);
+//                }
                 Main.writer.flush();
             }
         } catch (IOException e) {
@@ -92,9 +94,9 @@ public class ReaderReader implements Runnable {
         return normalized[5];
     }
     public static double getSetCurrent(){
-        if(Main.jagPID)
+//        if(Main.jagPID)
             return normalized[5];
-        else
-            return (double)PIDController.getInstance().getPIDParam(PIDController.PID_SETPOINT)/1000;
+//        else
+//           return pid setpoint/1000
     }
 }

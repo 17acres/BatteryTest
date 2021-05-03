@@ -1,1 +1,0 @@
-This work is released under the Mozilla Public License 1.0 found in the file LEGAL.txt as it uses the PIDController class from leJOS released under said license.

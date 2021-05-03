@@ -1,7 +1,5 @@
 package com.seventeen_acres_development;
 
-import com.sun.corba.se.impl.interceptors.PICurrent;
-
 import java.io.*;
 import java.util.ArrayList;
 import java.util.concurrent.Executors;
@@ -54,7 +52,7 @@ public class Main {
 
         }
         else {
-            PIDController.getInstance().setPIDParam(PIDController.PID_SETPOINT, (float) (current * 1000));
+            //Set PIDController setpoint to current*1000
         }
 
     }
